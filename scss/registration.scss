@@ -1,0 +1,44 @@
+@import "variables";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Bahnschrift, serif;
+}
+
+body {
+  background: url("../assets/background.jpg") no-repeat fixed center center/cover;
+}
+
+li, a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.menu {
+  @include navigation;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  padding-top: 130px;
+
+  .login-form {
+    width: 400px;
+    background: $white;
+    border-radius: 5px;
+
+    .login-tabs {
+      @include login-tabs;
+    }
+
+    .login-info {
+      @include login-info;
+      @include login-btn;
+    }
+  }
+}
+
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/logo.png"/>
+  <script src="https://kit.fontawesome.com/e741fb0866.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="menu">
+  <ul>
+    <li>
+      <a href="../index.html" class="logo">
+        <img src="../assets/logo.png" alt="SellBuy">
+      </a>
+    </li>
+    <li>
+      <a href="#" class="profile"><i class="far fa-user"></i> Мій профіль</a>
+    </li>
+    <li>
+      <a href="#" class="add-ad">Додати оголошення</a>
+    </li>
+  </ul>
+</nav>
+
+<section class="login">
+  <form class="login-form">
+    <div class="login-tabs">
+      <a href="./login.html" class="login-tab">Увійти</a>
+      <a href="./registration.html" class="login-tab">Реєстрація</a>
+    </div>
+    <div class="login-info">
+      <div class="login-email">
+        <p class="login-text">Вкажіть email</p>
+        <label>
+          <input type="email" placeholder="Email" class="login-input"
+                 required minlength="5">
+        </label>
+      </div>
+      <div class="login-username">
+        <p class="login-text">Вкажіть логін</p>
+        <label>
+          <input type="text" placeholder="Логін" class="login-input"
+                 required minlength="3" maxlength="15">
+        </label>
+      </div>
+      <div class="login-password">
+        <p class="login-text">Вкажіть надійний пароль</p>
+        <label>
+          <input type="password" placeholder="Пароль" class="login-input"
+                 required minlength="3" maxlength="15">
+        </label>
+      </div>
+      <div class="login-password-confirm">
+        <p class="login-text">Повторіть пароль</p>
+        <label>
+          <input type="password" placeholder="Підтвердіть пароль" class="login-input"
+                 required minlength="3" maxlength="15">
+        </label>
+      </div>
+      <button class="enter-btn">Реєстрація</button>
+    </div>
+  </form>
+</section>
+</body>
+</html>

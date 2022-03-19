@@ -1,0 +1,111 @@
+@import "variables";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Bahnschrift, serif;
+}
+
+li, a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.menu {
+  @include navigation;
+}
+
+.search {
+  background: $alice-blue;
+  padding-top: 80px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .search-item {
+    display: flex;
+    justify-content: space-evenly;
+
+
+    .search-field {
+      padding-left: 10px;
+      font-size: 20px;
+      border: none;
+      height: 75px;
+      width: 60vw;
+    }
+
+    .search-field:focus {
+      outline: none !important;
+    }
+
+    .search-btn {
+      font-size: 18px;
+      border: none;
+      border-left: 2px solid $alice-blue;
+      background-color: $white;
+      width: 10vw;
+      transition: all 0.4s ease;
+    }
+
+    .search-btn:hover {
+      cursor: pointer;
+      background-color: $dark-seal;
+      color: $white;
+    }
+  }
+}
+
+.ads {
+  padding: 30px 0;
+
+
+  .ad-main-title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .ad-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 20vw);
+    grid-template-rows: auto;
+    gap: 10px;
+
+    .ad {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 15px;
+      background: $alice-blue;
+      border-radius: 5px;
+
+      .ad-img {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .ad-title {
+        color: $black;
+        margin-bottom: 25px;
+        transition: all 0.3s ease;
+      }
+
+      .ad-title:hover {
+        color: $grey;
+      }
+
+      .ad-info {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+footer {
+  @include footer;
+}
