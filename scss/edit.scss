@@ -40,3 +40,33 @@ li, a {
     }
   }
 }
+
+// Small devices (landscape phones, 576px and up)
+@media screen and (max-width: 576px) {
+  nav.menu {
+    overflow: hidden;
+
+    ul {
+      height: 100px;
+
+      li {
+        .logo {
+          display: none;
+        }
+
+        .add-ad {
+          text-align: center;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  .login {
+    padding-top: 25vh;
+
+    .login-form {
+      width: 80vw;
+    }
+  }
+}

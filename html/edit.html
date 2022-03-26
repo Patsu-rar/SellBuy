@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SellBuy</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/edit.css">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/logo.png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
             </a>
         </li>
         <li>
-            <a href="./login.html" class="profile"><i class="far fa-user"></i> Мій профіль</a>
+            <a href="#" class="profile"><i class="far fa-user"></i> Мій профіль</a>
         </li>
         <li>
             <a href="./ad.html" class="add-ad">Додати оголошення</a>
@@ -30,27 +30,36 @@
 
 <section class="login">
     <form class="login-form">
-        <div class="login-tabs">
-            <a href="./login.html" class="login-tab">Увійти</a>
-            <a href="./registration.html" class="login-tab">Реєстрація</a>
-        </div>
         <div class="login-info">
-            <div class="login-username">
-                <p class="login-text">Ваш логін або email</p>
+            <div class="login-email">
+                <p class="login-text">Ваш email</p>
                 <label>
-                    <input type="text" placeholder="Логін або email" class="login-input"
-                           required minlength="3" maxlength="15"
-                           title="Це поле є обов'язковим та має бути в межах 3-15 символів">
+                    <input type="email" placeholder="Email" class="login-input"
+                           required minlength="5">
+                </label>
+            </div>
+            <div class="login-username">
+                <p class="login-text">Ваш логін</p>
+                <label>
+                    <input type="text" placeholder="Логін" class="login-input"
+                           required minlength="3" maxlength="15">
                 </label>
             </div>
             <div class="login-password">
-                <p class="login-text">Ваш поточний пароль</p>
+                <p class="login-text">Ваш пароль</p>
                 <label>
                     <input type="password" placeholder="Пароль" class="login-input"
-                           required minlength="3" maxlength="15" title="Numbers only, please.">
+                           required minlength="3" maxlength="15">
                 </label>
             </div>
-            <button class="enter-btn">Увійти</button>
+            <div class="login-password-confirm">
+                <p class="login-text">Повторіть пароль</p>
+                <label>
+                    <input type="password" placeholder="Підтвердіть пароль" class="login-input"
+                           required minlength="3" maxlength="15">
+                </label>
+            </div>
+            <button class="enter-btn">Зберегти</button>
         </div>
     </form>
 </section>

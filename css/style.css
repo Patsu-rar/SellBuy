@@ -1,13 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Bahnschrift, serif; }
+  font-family: 'Roboto', sans-serif; }
 
 li, a {
   list-style-type: none;
   text-decoration: none; }
 
 .menu {
+  z-index: 1;
   width: 100vw;
   background: #002f34;
   position: fixed; }
@@ -22,7 +23,8 @@ li, a {
       align-items: center;
       width: auto;
       height: 100%;
-      font-size: 20px; }
+      font-size: 20px;
+      font-weight: 500; }
       .menu ul li .profile {
         color: #fff;
         transition: all 0.2s ease; }
@@ -40,13 +42,14 @@ li, a {
         background: #002f34;
         border: 2px solid #fff; }
       .menu ul li .logo {
-        height: 90%; }
+        height: 90%;
+        width: 10vw; }
         .menu ul li .logo img {
           height: 90%; }
 
 .search {
   background: #f2f4f5;
-  padding-top: 80px;
+  padding-top: 8vh;
   height: 180px;
   display: flex;
   align-items: center;
@@ -116,3 +119,40 @@ footer {
     margin-bottom: 35px; }
   footer .footer-text {
     font-weight: 300; }
+
+@media (max-width: 992px) {
+  .search {
+    padding-top: 6vh; }
+
+  .ads .ad-list {
+    grid-template-columns: repeat(3, 30vw); } }
+@media (max-width: 768px) {
+  .search {
+    padding-top: 7vh; }
+
+  .ads .ad-list {
+    grid-template-columns: repeat(2, 45vw); }
+
+  footer .footer-logo {
+    width: 30%; } }
+@media screen and (max-width: 576px) {
+  nav.menu {
+    overflow: hidden; }
+    nav.menu ul {
+      height: 100px; }
+      nav.menu ul li .logo {
+        display: none; }
+      nav.menu ul li .add-ad {
+        text-align: center;
+        margin-right: 15px; }
+
+  .search {
+    padding-top: 12vh; }
+    .search .search-item .search-btn {
+      width: 25vw; }
+
+  .ads .ad-list {
+    grid-template-columns: repeat(1, 90vw); }
+
+  footer .footer-logo {
+    width: 35%; } }

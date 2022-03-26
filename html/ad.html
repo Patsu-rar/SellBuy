@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SellBuy</title>
+    <link rel="stylesheet" href="../css/ad.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/logo.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e741fb0866.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="menu">
+    <ul>
+        <li>
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo.png" alt="SellBuy">
+            </a>
+        </li>
+        <li>
+            <a href="./profile.html" class="profile"><i class="far fa-user"></i> Мій профіль</a>
+        </li>
+        <li>
+            <a href="./ad.html" class="add-ad">Додати оголошення</a>
+        </li>
+    </ul>
+</nav>
+<section class="ad">
+    <h1 class="ad-title">Створити оголошення</h1>
+    <form class="ad-form">
+        <div class="ad-item">
+            <h3 class="ad-details">Опишіть у подробицях</h3>
+            <label for="ad-name" class="ad-label">Вкажіть назву*</label>
+            <input type="text" id="ad-name" placeholder="Наприклад, інформація про місцезнаходження сил РФ"
+                   minlength="8" maxlength="200" class="ad-input">
+        </div>
+        <div class="ad-item">
+            <h3 class="ad-details">Фото</h3>
+            <p class="ad-label">Перше фото буде на обкладинці оголошення. Перетягніть, щоб змінити порядок фото.</p>
+            <div class="ad-grid">
+                <div class="ad-photo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32"
+                         data-testid="add-icon">
+                        <path fill="#7F9799" fill-rule="evenodd"
+                              d="M21.43 4l1.325 4h5.67l1.325 1.333v17.334L28.425 28H4.575L3.25 26.667V9.333L4.575 8h5.67l1.325-4h9.86zm-1.91 2.667h-6.04l-1.325 4H5.9v14.666h21.2V10.667h-6.255l-1.325-4zm-3.02 4c3.653 0 6.625 2.99 6.625 6.666S20.153 24 16.5 24s-6.625-2.99-6.625-6.667c0-3.676 2.972-6.666 6.625-6.666zm0 2.666c-2.192 0-3.975 1.794-3.975 4s1.783 4 3.975 4 3.975-1.794 3.975-4-1.783-4-3.975-4z"></path>
+                    </svg>
+                    <input type="file" accept="image/heic, image/png, image/jpeg, image/webp" class="photo-file"
+                           onchange="readURL(this);">
+                </div>
+                <div class="ad-photo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32"
+                         data-testid="add-icon">
+                        <path fill="#7F9799" fill-rule="evenodd"
+                              d="M21.43 4l1.325 4h5.67l1.325 1.333v17.334L28.425 28H4.575L3.25 26.667V9.333L4.575 8h5.67l1.325-4h9.86zm-1.91 2.667h-6.04l-1.325 4H5.9v14.666h21.2V10.667h-6.255l-1.325-4zm-3.02 4c3.653 0 6.625 2.99 6.625 6.666S20.153 24 16.5 24s-6.625-2.99-6.625-6.667c0-3.676 2.972-6.666 6.625-6.666zm0 2.666c-2.192 0-3.975 1.794-3.975 4s1.783 4 3.975 4 3.975-1.794 3.975-4-1.783-4-3.975-4z"></path>
+                    </svg>
+                    <input type="file" accept="image/heic, image/png, image/jpeg, image/webp" class="photo-file">
+                </div>
+                <div class="ad-photo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32"
+                         data-testid="add-icon">
+                        <path fill="#7F9799" fill-rule="evenodd"
+                              d="M21.43 4l1.325 4h5.67l1.325 1.333v17.334L28.425 28H4.575L3.25 26.667V9.333L4.575 8h5.67l1.325-4h9.86zm-1.91 2.667h-6.04l-1.325 4H5.9v14.666h21.2V10.667h-6.255l-1.325-4zm-3.02 4c3.653 0 6.625 2.99 6.625 6.666S20.153 24 16.5 24s-6.625-2.99-6.625-6.667c0-3.676 2.972-6.666 6.625-6.666zm0 2.666c-2.192 0-3.975 1.794-3.975 4s1.783 4 3.975 4 3.975-1.794 3.975-4-1.783-4-3.975-4z"></path>
+                    </svg>
+                    <input type="file" accept="image/heic, image/png, image/jpeg, image/webp" class="photo-file">
+                </div>
+                <div class="ad-photo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32"
+                         data-testid="add-icon">
+                        <path fill="#7F9799" fill-rule="evenodd"
+                              d="M21.43 4l1.325 4h5.67l1.325 1.333v17.334L28.425 28H4.575L3.25 26.667V9.333L4.575 8h5.67l1.325-4h9.86zm-1.91 2.667h-6.04l-1.325 4H5.9v14.666h21.2V10.667h-6.255l-1.325-4zm-3.02 4c3.653 0 6.625 2.99 6.625 6.666S20.153 24 16.5 24s-6.625-2.99-6.625-6.667c0-3.676 2.972-6.666 6.625-6.666zm0 2.666c-2.192 0-3.975 1.794-3.975 4s1.783 4 3.975 4 3.975-1.794 3.975-4-1.783-4-3.975-4z"></path>
+                    </svg>
+                    <input type="file" accept="image/heic, image/png, image/jpeg, image/webp" class="photo-file">
+                </div>
+                <div class="ad-photo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32"
+                         data-testid="add-icon">
+                        <path fill="#7F9799" fill-rule="evenodd"
+                              d="M21.43 4l1.325 4h5.67l1.325 1.333v17.334L28.425 28H4.575L3.25 26.667V9.333L4.575 8h5.67l1.325-4h9.86zm-1.91 2.667h-6.04l-1.325 4H5.9v14.666h21.2V10.667h-6.255l-1.325-4zm-3.02 4c3.653 0 6.625 2.99 6.625 6.666S20.153 24 16.5 24s-6.625-2.99-6.625-6.667c0-3.676 2.972-6.666 6.625-6.666zm0 2.666c-2.192 0-3.975 1.794-3.975 4s1.783 4 3.975 4 3.975-1.794 3.975-4-1.783-4-3.975-4z"></path>
+                    </svg>
+                    <input type="file" accept="image/heic, image/png, image/jpeg, image/webp" class="photo-file">
+                </div>
+                <div class="ad-photo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32"
+                         data-testid="add-icon">
+                        <path fill="#7F9799" fill-rule="evenodd"
+                              d="M21.43 4l1.325 4h5.67l1.325 1.333v17.334L28.425 28H4.575L3.25 26.667V9.333L4.575 8h5.67l1.325-4h9.86zm-1.91 2.667h-6.04l-1.325 4H5.9v14.666h21.2V10.667h-6.255l-1.325-4zm-3.02 4c3.653 0 6.625 2.99 6.625 6.666S20.153 24 16.5 24s-6.625-2.99-6.625-6.667c0-3.676 2.972-6.666 6.625-6.666zm0 2.666c-2.192 0-3.975 1.794-3.975 4s1.783 4 3.975 4 3.975-1.794 3.975-4-1.783-4-3.975-4z"></path>
+                    </svg>
+                    <input type="file" accept="image/heic, image/png, image/jpeg, image/webp" class="photo-file">
+                </div>
+                <div class="ad-photo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32"
+                         data-testid="add-icon">
+                        <path fill="#7F9799" fill-rule="evenodd"
+                              d="M21.43 4l1.325 4h5.67l1.325 1.333v17.334L28.425 28H4.575L3.25 26.667V9.333L4.575 8h5.67l1.325-4h9.86zm-1.91 2.667h-6.04l-1.325 4H5.9v14.666h21.2V10.667h-6.255l-1.325-4zm-3.02 4c3.653 0 6.625 2.99 6.625 6.666S20.153 24 16.5 24s-6.625-2.99-6.625-6.667c0-3.676 2.972-6.666 6.625-6.666zm0 2.666c-2.192 0-3.975 1.794-3.975 4s1.783 4 3.975 4 3.975-1.794 3.975-4-1.783-4-3.975-4z"></path>
+                    </svg>
+                    <input type="file" accept="image/heic, image/png, image/jpeg, image/webp" class="photo-file">
+                </div>
+                <div class="ad-photo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32"
+                         data-testid="add-icon">
+                        <path fill="#7F9799" fill-rule="evenodd"
+                              d="M21.43 4l1.325 4h5.67l1.325 1.333v17.334L28.425 28H4.575L3.25 26.667V9.333L4.575 8h5.67l1.325-4h9.86zm-1.91 2.667h-6.04l-1.325 4H5.9v14.666h21.2V10.667h-6.255l-1.325-4zm-3.02 4c3.653 0 6.625 2.99 6.625 6.666S20.153 24 16.5 24s-6.625-2.99-6.625-6.667c0-3.676 2.972-6.666 6.625-6.666zm0 2.666c-2.192 0-3.975 1.794-3.975 4s1.783 4 3.975 4 3.975-1.794 3.975-4-1.783-4-3.975-4z"></path>
+                    </svg>
+                    <input type="file" accept="image/heic, image/png, image/jpeg, image/webp" class="photo-file">
+                </div>
+            </div>
+        </div>
+        <div class="ad-item">
+            <p class="ad-label">Опис*</p>
+            <textarea name="description" cols="72" rows="13" class="ad-description" minlength="80"
+                      placeholder="Подумайте, що ви хотіли би дізнатися з оголошення. І додайте це в опис"
+            ></textarea>
+
+        </div>
+        <div class="ad-item">
+            <h3 class="ad-details">Ваші контактні дані</h3>
+            <label for="ad-place" class="ad-personal">Місцезнаходження*</label>
+            <input type="text" id="ad-place" placeholder="Назва міста"
+                   minlength="8" maxlength="200" class="ad-input ad-input-details">
+
+            <label for="ad-email" class="ad-personal">Email-адреса</label>
+            <input type="text" id="ad-email" minlength="8" maxlength="200" class="ad-input ad-input-details">
+
+            <label for="ad-number" class="ad-personal">Номер телефону</label>
+            <input type="text" id="ad-number" minlength="8" maxlength="200" class="ad-input ad-input-details">
+        </div>
+
+        <button class="ad-confirm" type="submit">Опублікувати</button>
+    </form>
+</section>
+</body>
+</html>

@@ -53,9 +53,9 @@ li, a {
 .login {
   display: flex;
   justify-content: center;
-  padding-top: 130px; }
+  padding-top: 30vh; }
   .login .login-form {
-    width: 400px;
+    width: 50vh;
     background: #fff;
     border-radius: 5px; }
     .login .login-form .login-tabs {
@@ -110,18 +110,19 @@ li, a {
         background: #fff;
         border: 2px solid #002f34; }
 
+@media (max-width: 768px) {
+  .login .login-form {
+    width: 50vw; } }
 @media screen and (max-width: 576px) {
   nav.menu {
     overflow: hidden; }
     nav.menu ul {
-      height: 100px; }
+      height: 160px; }
       nav.menu ul li .logo {
         display: none; }
       nav.menu ul li .add-ad {
         text-align: center;
         margin-right: 15px; }
 
-  .login {
-    padding-top: 25vh; }
-    .login .login-form {
-      width: 80vw; } }
+  .login .login-form {
+    width: 80vw; } }
