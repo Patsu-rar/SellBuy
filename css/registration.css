@@ -109,19 +109,3 @@ li, a {
         color: #002f34;
         background: #fff;
         border: 2px solid #002f34; }
-
-@media screen and (max-width: 576px) {
-  nav.menu {
-    overflow: hidden; }
-    nav.menu ul {
-      height: 100px; }
-      nav.menu ul li .logo {
-        display: none; }
-      nav.menu ul li .add-ad {
-        text-align: center;
-        margin-right: 15px; }
-
-  .login {
-    padding-top: 25vh; }
-    .login .login-form {
-      width: 80vw; } }
