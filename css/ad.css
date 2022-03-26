@@ -178,7 +178,7 @@ li, a {
   nav.menu {
     overflow: hidden; }
     nav.menu ul {
-      height: 160px; }
+      height: 100px; }
       nav.menu ul li .logo {
         display: none; }
       nav.menu ul li .add-ad {
