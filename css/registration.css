@@ -53,7 +53,8 @@ li, a {
 .login {
   display: flex;
   justify-content: center;
-  padding-top: 130px; }
+  padding-top: 130px;
+  padding-bottom: 80px; }
   .login .login-form {
     width: 400px;
     background: #fff;
@@ -109,3 +110,6 @@ li, a {
         color: #002f34;
         background: #fff;
         border: 2px solid #002f34; }
+      .login .login-form .login-info .login-credentials {
+        display: flex;
+        gap: 15px; }

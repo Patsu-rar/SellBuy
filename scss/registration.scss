@@ -24,6 +24,7 @@ li, a {
   display: flex;
   justify-content: center;
   padding-top: 130px;
+  padding-bottom: 80px;
 
   .login-form {
     width: 400px;
@@ -37,6 +38,11 @@ li, a {
     .login-info {
       @include login-info;
       @include login-btn;
+
+      .login-credentials {
+        display: flex;
+        gap: 15px;
+      }
     }
   }
 }
