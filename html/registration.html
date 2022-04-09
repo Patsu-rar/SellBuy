@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SellBuy</title>
-  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/registration.css">
   <link rel="shortcut icon" type="image/x-icon" href="../assets/logo.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/e741fb0866.js" crossorigin="anonymous"></script>
+  <script src="../js/registration.js" defer></script>
 </head>
 <body>
 <nav class="menu">
@@ -49,6 +50,22 @@
                  required minlength="3" maxlength="15">
         </label>
       </div>
+      <div class="login-credentials">
+        <div class="login-first-name">
+          <p class="login-text">Вкажіть ім'я</p>
+          <label>
+            <input type="text" placeholder="Ім'я" class="login-input" id="first-name"
+                   required minlength="2" maxlength="50">
+          </label>
+        </div>
+        <div class="login-username">
+          <p class="login-text">Вкажіть прізвище</p>
+          <label>
+            <input type="text" placeholder="Прізвище" class="login-input" id="last-name"
+                   required minlength="2" maxlength="50">
+          </label>
+        </div>
+      </div>
       <div class="login-password">
         <p class="login-text">Вкажіть надійний пароль</p>
         <label>
@@ -61,6 +78,13 @@
         <label>
           <input type="password" placeholder="Підтвердіть пароль" class="login-input"
                  required minlength="3" maxlength="15">
+        </label>
+      </div>
+      <div class="login-region">
+        <p class="login-text">Вкажіть регіон</p>
+        <label>
+          <input type="number" placeholder="Регіон" class="login-input"
+          required>
         </label>
       </div>
       <button class="enter-btn">Реєстрація</button>
