@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e741fb0866.js" crossorigin="anonymous"></script>
+    <script src="../js/edit.js" defer></script>
 </head>
 <body>
 <nav class="menu">
@@ -29,37 +30,30 @@
 </nav>
 
 <section class="login">
-    <form class="login-form">
+    <form class="login-form" id="#edit-form">
         <div class="login-info">
-            <div class="login-email">
-                <p class="login-text">Ваш email</p>
-                <label>
-                    <input type="email" placeholder="Email" class="login-input"
-                           required minlength="5">
-                </label>
-            </div>
             <div class="login-username">
-                <p class="login-text">Ваш логін</p>
+                <p class="login-text">Введіть старий пароль</p>
                 <label>
-                    <input type="text" placeholder="Логін" class="login-input"
+                    <input type="password" placeholder="Старий пароль" class="login-input" id="old-password"
                            required minlength="3" maxlength="15">
                 </label>
             </div>
             <div class="login-password">
-                <p class="login-text">Ваш пароль</p>
+                <p class="login-text">Введіть новий пароль</p>
                 <label>
-                    <input type="password" placeholder="Пароль" class="login-input"
+                    <input type="password" placeholder="Новий пароль" class="login-input" id="new-password"
                            required minlength="3" maxlength="15">
                 </label>
             </div>
             <div class="login-password-confirm">
-                <p class="login-text">Повторіть пароль</p>
+                <p class="login-text">Повторіть новий пароль</p>
                 <label>
-                    <input type="password" placeholder="Підтвердіть пароль" class="login-input"
+                    <input type="password" placeholder="Новий пароль" class="login-input" id="verified-password"
                            required minlength="3" maxlength="15">
                 </label>
             </div>
-            <button class="enter-btn">Зберегти</button>
+            <button type="submit" class="enter-btn">Зберегти</button>
         </div>
     </form>
 </section>
