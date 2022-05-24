@@ -1,0 +1,70 @@
+.menu {
+  z-index: 1;
+  width: 100vw;
+  background: #002f34;
+  position: fixed;
+}
+
+.menu ul {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.menu ul li {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.menu ul li .profile {
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.menu ul li .profile:hover {
+  color: #7f9799;
+}
+
+.menu ul li .add-ad {
+  padding: 10px 20px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  color: #002f34;
+  transition: all 0.3s ease;
+}
+
+.menu ul li .add-ad:hover {
+  color: #fff;
+  background: #002f34;
+  border: 2px solid #fff;
+}
+
+.menu ul li .logo {
+  height: 90%;
+  width: 10vw;
+}
+
+.menu ul li .logo img {
+  height: 90%;
+}
+
+.menu ul li .logout p .button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.menu ul li .logout p .button:hover {
+  color: #7f9799;
+}

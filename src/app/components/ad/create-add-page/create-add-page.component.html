@@ -1,0 +1,50 @@
+<div class="ad">
+  <h1 class="ad-title">Створити оголошення</h1>
+  <form class="ad-form" [formGroup]="form" (submit)="onSubmit()">
+    <div class="ad-item">
+      <h3 class="ad-details">Опишіть у подробицях</h3>
+      <label for="ad-name" class="ad-label">Вкажіть назву*</label>
+      <input type="text" id="ad-name" placeholder="Наприклад, інформація про місцезнаходження сил РФ"
+             [ngClass]="verifyName()" class="ad-input" formControlName="name">
+    </div>
+    <div class="ad-item">
+      <h3 class="ad-details">Фото</h3>
+      <p class="ad-label">Прикріпіть фото для вашого оголошення</p>
+      <div class="ad-grid">
+        <div class="ad-photo ad-image" *ngFor="let image of imageUrls; let i = index" [ngStyle]="{
+          'background': 'url('+image+') no-repeat center center/cover'
+          }" (mouseenter)="changeState=true; clickedIndex = i" (mouseleave)="changeState=false; clickedIndex = 0">
+          <div class="ad-wrapper" *ngIf="changeState && clickedIndex === i">
+            <span class="ad-bin" (click)="removeFile()">
+              <i class="fas fa-trash-alt"></i>
+            </span>
+          </div>
+        </div>
+        <div class="ad-photo" *ngFor="let _ of freeSpace|times; let i = index">
+          <div *ngIf="freeSpace !== 0" (change)="(freeSpace = freeSpace - 1) && (storedSpace = storedSpace + 1)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32"
+                 data-testid="add-icon">
+              <path fill="#7F9799" fill-rule="evenodd"
+                    d="M21.43 4l1.325 4h5.67l1.325 1.333v17.334L28.425 28H4.575L3.25 26.667V9.333L4.575 8h5.67l1.325-4h9.86zm-1.91 2.667h-6.04l-1.325 4H5.9v14.666h21.2V10.667h-6.255l-1.325-4zm-3.02 4c3.653 0 6.625 2.99 6.625 6.666S20.153 24 16.5 24s-6.625-2.99-6.625-6.667c0-3.676 2.972-6.666 6.625-6.666zm0 2.666c-2.192 0-3.975 1.794-3.975 4s1.783 4 3.975 4 3.975-1.794 3.975-4-1.783-4-3.975-4z"></path>
+            </svg>
+            <input #file type="file" accept="image/heic, image/png, image/jpeg, image/webp" class="photo-file"
+                   (change)="preview(file.files); addFile($event)"
+                   (click)="clickedIndex = i">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ad-item">
+      <p class="ad-label">Опис*</p>
+      <textarea name="description" cols="72" rows="13" class="ad-description" [ngClass]="verifyDescription()"
+                placeholder="Подумайте, що ви хотіли би дізнатися з оголошення і додайте це в опис"
+                formControlName="description"
+      ></textarea>
+    </div>
+    <button class="ad-confirm" type="submit">Опублікувати</button>
+  </form>
+</div>
+
+<div *ngFor="">
+
+</div>

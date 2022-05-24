@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="login">
+    <form class="login-form" [formGroup]="form">
+      <div class="login-info">
+        <div class="login-email">
+          <p class="login-text">Ваш email</p>
+          <label>
+            <input type="text" placeholder="Email" class="login-input" id="email" formControlName="email">
+          </label>
+        </div>
+        <div class="login-username">
+          <p class="login-text">Ваш username</p>
+          <label>
+            <input type="text" placeholder="Логін" class="login-input" id="username" formControlName="username">
+          </label>
+        </div>
+        <a class="enter-btn" routerLinkActive="active" routerLink="/edit-profile">Змінити пароль</a>
+      </div>
+    </form>
+  </div>
+</div>

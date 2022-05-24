@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <div class="login">
+    <form class="login-form" id="#edit-form" [formGroup]="form" (submit)="changePassword()">
+      <div class="login-info">
+        <div class="login-username">
+          <p class="login-text">Введіть старий пароль</p>
+          <label>
+            <input type="password" placeholder="Старий пароль" class="login-input" id="old-password"
+                   formControlName="old_pass">
+          </label>
+        </div>
+        <div class="login-password">
+          <p class="login-text">Введіть новий пароль</p>
+          <label>
+            <input type="password" placeholder="Новий пароль" class="login-input" id="new-password"
+                   formControlName="new_pass">
+          </label>
+        </div>
+        <div class="login-password-confirm">
+          <p class="login-text">Повторіть новий пароль</p>
+          <label>
+            <input type="password" placeholder="Новий пароль" class="login-input" id="verified-password"
+                   formControlName="verified_pass">
+          </label>
+        </div>
+        <button type="submit" class="enter-btn">Зберегти</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<section class="search">
+  <div class="search-item">
+    <label>
+      <input type="text" placeholder="Пошук..." class="search-field" [(ngModel)]="searchAd">
+    </label>
+    <button class="search-btn">
+      <i class="fas fa-search"></i> Пошук
+    </button>
+  </div>
+</section>
+
+<section class="ads">
+  <h2 class="ad-main-title">Оголошення</h2>
+  <div class="ad-list">
+    <div class="ad" *ngFor="let ad of ads | search: searchAd; let i = index ">
+      <a href="">
+        <img [src]="images[i]" alt="ad photo" class="ad-img">
+      </a>
+      <a href="" class="ad-title">{{ad.name}}</a>
+      <p class="ad-info">{{ad.date_of_publishing}}</p>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

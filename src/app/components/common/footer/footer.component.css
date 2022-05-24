@@ -1,0 +1,15 @@
+footer {
+  text-align: center;
+  background: #cbf7ee;
+  padding: 50px 0;
+}
+
+footer .footer-logo {
+  width: 7%;
+  height: auto;
+  margin-bottom: 35px;
+}
+
+footer .footer-text {
+  font-weight: 300;
+}

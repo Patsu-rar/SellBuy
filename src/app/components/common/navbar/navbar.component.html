@@ -1,0 +1,30 @@
+<nav class="menu">
+  <ul>
+    <li>
+      <a class="logo" routerLinkActive="active" routerLink="">
+        <img src="../../../../assets/images/logo.png" alt="SellBuy">
+      </a>
+    </li>
+    <li>
+      <a class="profile" routerLinkActive="active" routerLink="/login" *ngIf="!isLogged()">
+        <i class="far fa-user"></i> Мій профіль
+      </a>
+      <a class="profile" routerLinkActive="active" routerLink="/profile" *ngIf="isLogged()">
+        <i class="far fa-user"></i> Мій профіль
+      </a>
+    </li>
+    <li *ngIf="isLogged()">
+      <form class="logout">
+        <p>
+          <input class="button" type="submit" value="Вийти" (click)="logout()"/>
+        </p>
+      </form>
+    </li>
+    <li *ngIf="!isLogged()">
+      <a class="add-ad" routerLinkActive="active" routerLink="/login">Додати оголошення</a>
+    </li>
+    <li *ngIf="isLogged()">
+      <a class="add-ad" routerLinkActive="active" routerLink="/create-add">Додати оголошення</a>
+    </li>
+  </ul>
+</nav>

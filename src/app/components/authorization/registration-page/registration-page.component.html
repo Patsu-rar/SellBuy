@@ -1,0 +1,67 @@
+<div class="wrapper">
+  <div class="login">
+    <form class="login-form" id="registration-form" [formGroup]="form" (submit)="register()">
+      <div class="login-tabs">
+        <a class="login-tab" routerLinkActive="active" routerLink="/login">Увійти</a>
+        <a class="login-tab" routerLinkActive="active" routerLink="/registration">Реєстрація</a>
+      </div>
+      <div class="login-info">
+        <div class="login-email">
+          <p class="login-text">Вкажіть email</p>
+          <label>
+            <input type="email" placeholder="Email" class="login-input" id="email" formControlName="email"
+                   [ngClass]="verifyEmail()">
+          </label>
+        </div>
+        <div class="login-username">
+          <p class="login-text">Вкажіть логін</p>
+          <label>
+            <input type="text" placeholder="Логін" class="login-input" id="username" formControlName="username"
+                   [ngClass]="verifyUsername()">
+          </label>
+        </div>
+        <div class="login-credentials">
+          <div class="login-first-name">
+            <p class="login-text">Вкажіть ім'я</p>
+            <label>
+              <input type="text" placeholder="Ім'я" class="login-input" id="first-name" formControlName="first_name"
+                     [ngClass]="verifyFirstName()">
+            </label>
+          </div>
+          <div class="login-username">
+            <p class="login-text">Вкажіть прізвище</p>
+            <label>
+              <input type="text" placeholder="Прізвище" class="login-input" id="last-name" formControlName="last_name"
+                     [ngClass]="verifyLastName()">
+            </label>
+          </div>
+        </div>
+        <div class="login-password">
+          <p class="login-text">Вкажіть надійний пароль</p>
+          <label>
+            <input type="password" placeholder="Пароль" class="login-input" id="password" formControlName="password"
+                   [ngClass]="verifyPassword()">
+          </label>
+        </div>
+        <div class="login-password-confirm">
+          <p class="login-text">Повторіть пароль</p>
+          <label>
+            <input type="password" placeholder="Підтвердіть пароль" class="login-input" id="verify-password"
+                   formControlName="valid_password" [ngClass]="verifyValidPassword()">
+          </label>
+        </div>
+        <div class="login-region">
+          <p class="login-text">Вкажіть регіон</p>
+          <label>
+            <select class="login-input" id="region-id" required formControlName="region_id"
+                    [ngClass]="verifyRegion()">
+              <option disabled selected>Виберіть свій регіон...</option>
+              <option *ngFor="let region of regions" [ngValue]="region">{{region}}</option>
+            </select>
+          </label>
+        </div>
+        <button class="enter-btn" type="submit">Реєстрація</button>
+      </div>
+    </form>
+  </div>
+</div>

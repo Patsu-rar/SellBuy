@@ -1,0 +1,87 @@
+.wrapper {
+  height: 100vh;
+  background: url("../../../../assets/images/background.jpg") no-repeat fixed center center/cover;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  padding-top: 130px;
+}
+
+.login .login-form {
+  width: 400px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.login .login-form .login-tabs {
+  color: #000;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid #7f9799;
+}
+
+.login .login-form .login-tabs .login-tab {
+  text-align: center;
+  padding: 20px;
+  width: 50%;
+  border-bottom: 3px solid #fff;
+  transition: all 0.3s ease-out;
+}
+
+.login .login-form .login-tabs .login-tab:hover {
+  border-bottom: 3px solid #002f34;
+}
+
+.login .login-form .login-info {
+  display: flex;
+  flex-direction: column;
+  padding: 37px 32px 46px;
+}
+
+.login .login-form .login-info .login-text {
+  font-size: 14px;
+  font-weight: 300;
+  color: #71848d;
+}
+
+.login .login-form .login-info .login-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border-radius: 4px;
+  background: #f2f4f5;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.login .login-form .login-info .login-input:focus {
+  outline: none;
+  box-shadow: 0 2px 0 0 #406367;
+}
+
+.login .login-form .login-info .login-input:invalid {
+  border: 2px solid #ff0000;
+}
+
+.login .login-form .login-info .enter-btn {
+  margin-top: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  background: #002f34;
+  cursor: pointer;
+  border: 2px solid #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+
+.login .login-form .login-info .enter-btn:hover {
+  color: #002f34;
+  background: #fff;
+  border: 2px solid #002f34;
+}

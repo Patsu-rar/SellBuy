@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <div class="login">
+    <form class="login-form" [formGroup]="form" (submit)="login()">
+      <div class="login-tabs">
+        <a class="login-tab" routerLinkActive="active" routerLink="/login">Увійти</a>
+        <a class="login-tab" routerLinkActive="active" routerLink="/registration">Реєстрація</a>
+      </div>
+      <div class="login-info">
+        <div class="login-username">
+          <p class="login-text">Ваш логін</p>
+          <label>
+            <input type="text" placeholder="Логін" class="login-input" id="username"
+                   required minlength="3" maxlength="15" formControlName="username">
+          </label>
+        </div>
+        <div class="login-password">
+          <p class="login-text">Ваш поточний пароль</p>
+          <label>
+            <input type="password" placeholder="Пароль" class="login-input" id="password"
+                   required minlength="3" maxlength="15" formControlName="password">
+          </label>
+        </div>
+        <button class="enter-btn" type="submit">Увійти</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
