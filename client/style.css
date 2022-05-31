@@ -1,0 +1,49 @@
+body {
+    background: url("https://wallpaperaccess.com/full/1579893.jpg") no-repeat center center/cover;
+}
+
+p {
+    margin: 0;
+}
+
+#send {
+    width: 70px;
+}
+
+.container {
+    background: rgba(23, 101, 161, 0.37);
+    width: 45%;
+    height: 90vh;
+    margin: 0 auto;
+    box-shadow: 0 4px 70px 50px rgba(23, 101, 161, 0.37);
+    padding: 10px;
+}
+
+.chat {
+    height: 95%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.action {
+    height: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.username {
+    color: antiquewhite;
+    font-size: 14px;
+}
+
+.time {
+    color: #00ff11;
+    font-size: 14px;
+}
+
+.note {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
